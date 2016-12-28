@@ -27,6 +27,8 @@ RUN \
 
 COPY copy/ /
 
+VOLUME ["/home/zim32/www"]
+
 CMD ["/bin/bash", "/root/start_all.sh"]
 
 EXPOSE 8080
