@@ -19,6 +19,7 @@ RUN \
 	echo 'opcache.enable = Off' >> /etc/php5/mods-available/opcache.ini && \
 	echo ';xdebug.remote_enable = On' >> /etc/php5/mods-available/xdebug.ini && \
 	echo ';xdebug.var_display_max_depth = 5' >> /etc/php5/mods-available/xdebug.ini && \
+	echo 'xdebug.max_nesting_level = 250' >> /etc/php5/mods-available/xdebug.ini && \
 	mkdir /home/zim32/www && \
 	mkdir /home/zim32/www/logs && \
 	mkdir /home/zim32/www/logs/php && \
