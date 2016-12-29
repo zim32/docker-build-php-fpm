@@ -1,6 +1,7 @@
-FROM zim32/debian:v1
+FROM zim32/debian:latest
 
-RUN apt-get update && apt-get install -y \
+RUN \
+	apt-get update && apt-get upgrade -y && apt-get install -y \
 	ssh \
 	curl \
 	php5-fpm \
@@ -28,7 +29,7 @@ RUN \
 
 COPY copy/ /
 
-VOLUME ["/home/zim32/www"]
+VOLUME ["/home/zim32/www/logs"]
 
 CMD ["/bin/bash", "/root/start_all.sh"]
 
